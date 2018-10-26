@@ -37,29 +37,32 @@
 
 <% if current_user %>
 
-<li class="col-md-8 user-name">
+  <li class="col-md-8 user-name">
 
-<%= link_to ('<i class="fas fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
+     <%= link_to ('<i class="fas fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
 
-edit_user_registration_path, title: 'Edit Profile' %>
+        edit_user_registration_path, title: 'Edit Profile' %>
 
-</li>
+  </li>
 
-<li class="col-md-1"> </li>
+  <li class="col-md-1"> </li>
 
-<li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path,
+  <li class="col-md-3 logout"> <%= link_to('Logout', destroy_user_session_path,
 
-class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
+    class: 'btn btn-xs btn-danger', title: 'Logout', method: :delete) %>
 
-<% else %>
+  </li>
 
-<li class="col-md-4 pull-right">
+  <% else %>
 
-<%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
+  <li class="col-md-4 pull-right">
+
+    <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
 
 </li>
 
 <% end %> 
+
 </ul>
         </div>
       </div>
@@ -67,7 +70,7 @@ class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
