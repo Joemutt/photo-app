@@ -11,6 +11,10 @@ gem 'twitter-bootstrap-rails', '4.0.0'
 gem 'devise-bootstrap-views', '1.1.0'
 gem 'devise',                 '4.5.0'
 gem 'stripe',                 '3.28.0'
+gem 'carrierwave',             '1.2.3'
+gem 'mini_magick',             '4.9.2'
+gem 'fog',                     '2.0.0'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
